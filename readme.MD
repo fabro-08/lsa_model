@@ -89,8 +89,28 @@ El notebook `01_lsa_model.ipynb` hace uso de **Ollama**, por lo que es necesario
 - **deepseek-r1:32b**
 - **phi4**
 
-Para instalar Ollama, siga las instrucciones en [https://ollama.ai](https://ollama.ai) y asegúrese de que los modelos mencionados están disponibles en su entorno.
+### Instalación de Ollama
+Para instalar **Ollama**, siga las instrucciones según su sistema operativo:
+
+- **Windows**: Descargar e instalar desde [https://ollama.com/download](https://ollama.com/download)
+- **macOS**: Ejecutar en terminal:
+  ```sh
+  brew install ollama
+  ```
+- **Linux**: Ejecutar en terminal:
+  ```sh
+  curl -fsSL https://ollama.com/install.sh | sh
+  ```
+
+### Descarga de Modelos
+Después de instalar **Ollama**, descargue los modelos requeridos ejecutando:
+```sh
+ollama pull llama3.2
+ollama pull deepseek-r1:32b
+ollama pull phi4
+```
+Esto asegurará que los modelos estén disponibles localmente antes de ejecutar `01_lsa_model.ipynb`.
 
 ---
-Este `README.md` proporciona instrucciones claras sobre cómo ejecutar `install_env.sh` en diferentes sistemas operativos y cómo utilizar el modelo LSA. Si tiene preguntas, consulte la documentación de su sistema o abra un issue en el repositorio.
+Este `README.md` proporciona instrucciones claras sobre cómo ejecutar `install_env.sh` en diferentes sistemas operativos, cómo instalar **Ollama**, y cómo descargar los modelos necesarios para el correcto funcionamiento del proyecto. Si tiene preguntas, consulte la documentación de su sistema o abra un issue en el repositorio.
 
