@@ -1,4 +1,9 @@
-openai
-langchain
-langchain-community
-langchain-openai
+openai==1.64.0
+langchain==0.3.19
+langchain-community==0.3.18
+langchain-openai==0.3.7
+langgraph==0.2.74
+dotenv==0.9.9
+numpy==2.2.3
+ollama==0.4.7
+pydantic==2.10.6
