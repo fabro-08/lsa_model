@@ -4,10 +4,10 @@ FROM python:3.12.4-slim AS builder
 WORKDIR /usr/src/app/
 
 # Copiar el backend
-COPY ./app/ /usr/src/app/
+COPY backend/app/ /usr/src/app/
 
 # Copiar dependencias
-COPY ./env/requirements.txt /usr/src/app/requirements.txt
+COPY ./backend/env/requirements.txt /usr/src/app/requirements.txt
 
 RUN pip install --upgrade pip && \
     pip install --no-cache-dir -r /usr/src/app/requirements.txt

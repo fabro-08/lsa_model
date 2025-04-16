@@ -12,7 +12,7 @@ logger = config_logger("translation_spa_to_lsa")
 # 🔹 Nodo de traducción
 async def translate_node(state: GraphState) -> GraphState:
     try:
-        result = await translator(prompt_user=state.prompt_user, sentence=state.text)
+        result = await translator(prompt_user=state.prompt_user, sentence=state.text, model=state.model)
         return state.copy(update={
             "response": {"result": result}
         })

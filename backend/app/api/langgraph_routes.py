@@ -7,6 +7,7 @@ router = APIRouter()
 class TranslationInput(BaseModel):
     text: str
     prompt_user: str
+    model: str = "microsoft/phi-4"  # Default model
 
 @router.post("/translator_lsa")
 async def translate_to_lsa(payload: TranslationInput):
@@ -15,6 +16,7 @@ async def translate_to_lsa(payload: TranslationInput):
         initial_state = {
             "text": payload.text,
             "prompt_user": payload.prompt_user,
+            "model": payload.model,
         }
         result = await graph.ainvoke(initial_state)
         return result
@@ -34,6 +36,7 @@ async def translate_to_spa(payload: TranslationInput):
         initial_state = {
             "text": payload.text,
             "prompt_user": payload.prompt_user,
+            "model": payload.model,
         }
         result = await graph.ainvoke(initial_state)
         return result
