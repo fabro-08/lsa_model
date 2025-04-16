@@ -1,8 +1,6 @@
+.DS_Store
 __pycache__/
 *.pyc
 *.pyo
 *.log
-.envrc
-.DS_Store
 .env
-*.env
