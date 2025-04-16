@@ -1,0 +1,17 @@
+openai
+langgraph
+langchain
+langchain-community
+langchain-openai
+streamlit
+uvicorn
+fastapi
+sentence-transformers
+psycopg2-binary
+dotenv
+pydantic
+sqlalchemy
+asyncpg
+greenlet
+pyyaml
+dotenv

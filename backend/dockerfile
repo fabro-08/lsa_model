@@ -1,0 +1,17 @@
+# Etapa 1: Construcción del entorno base
+FROM python:3.12.4-slim AS builder
+
+WORKDIR /usr/src/app/
+
+# Copiar el backend
+COPY ./app/ /usr/src/app/
+
+# Copiar dependencias
+COPY ./env/requirements.txt /usr/src/app/requirements.txt
+
+RUN pip install --upgrade pip && \
+    pip install --no-cache-dir -r /usr/src/app/requirements.txt
+
+EXPOSE 8000
+
+CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]
