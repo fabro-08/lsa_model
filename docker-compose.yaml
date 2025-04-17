@@ -1,0 +1,60 @@
+version: '3.8'
+
+services:
+  # db:
+  #   image: ankane/pgvector:latest
+  #   container_name: pgvector_db
+  #   restart: always
+  #   environment:
+  #     POSTGRES_DB: hire_db
+  #     POSTGRES_USER: admin
+  #     POSTGRES_PASSWORD: admin
+  #   ports:
+  #     - "5432:5432"
+  #   volumes:
+  #     - pgvector_data:/var/lib/postgresql/data
+  #     - ./init-scripts:/docker-entrypoint-initdb.d
+  #   networks:
+  #     - app_network
+
+  api:
+    build:
+      context: .
+      dockerfile: backend/dockerfile  # 📌 Apunta a la ubicación del Dockerfile actualizado
+    container_name: fastapi_app_lsa
+    ports:
+      - "8000:8000"
+    #depends_on:
+    #  - db
+    #environment:
+    #  - DATABASE_URL=postgresql://admin:admin@db:5432/hire_db
+    volumes:
+      - ./backend:/usr/src/app  # 📌 Volumen ajustado a la nueva estructura
+    networks:
+      - app_network
+
+  frontend:
+    build:
+      context: .
+      dockerfile: frontend/dockerfile  # ✅ Corregido: path correcto al Dockerfile
+    container_name: streamlit_frontend
+    ports:
+      - "8501:8501"
+    depends_on:
+      - api
+    volumes:
+      - ./frontend/app:/usr/src/app  # ✅ Persistencia del código
+      - ./frontend/env:/usr/src/app/env  # 📌 Montar configuración del frontend
+    environment:
+      - STREAMLIT_SERVER_RUN_ON_SAVE=true  # ✅ Permite la recarga automática
+    networks:
+      - app_network
+
+
+networks:
+  app_network:
+    driver: bridge
+
+volumes:
+  pgvector_data:
+    driver: local

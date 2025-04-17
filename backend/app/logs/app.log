@@ -1,0 +1,13 @@
+2025-04-15 22:54:49,618 - ERROR - Error en translator: 'coroutine' object has no attribute 'content'
+2025-04-15 22:56:52,606 - ERROR - Error en translator: 'coroutine' object has no attribute 'content'
+2025-04-15 22:57:27,600 - ERROR - Error en translator: 'coroutine' object has no attribute 'content'
+2025-04-15 23:02:30,929 - ERROR - Error en nodo de traducción: 'GraphState' object is not subscriptable
+2025-04-15 23:03:17,402 - ERROR - Error en nodo de traducción: 'GraphState' object is not subscriptable
+2025-04-15 23:04:31,733 - ERROR - Error en nodo de traducción: 'GraphState' object is not subscriptable
+2025-04-15 23:04:34,546 - ERROR - Error en nodo de traducción: 'GraphState' object is not subscriptable
+2025-04-15 23:19:58,234 - ERROR - Error en translator: ' instructions '
+2025-04-15 23:20:52,112 - ERROR - Error en translator: ' prompt_user '
+2025-04-15 23:21:16,967 - ERROR - Error en translator: ' prompt_user '
+2025-04-15 23:21:41,178 - ERROR - Error en translator: ' instructions '
+2025-04-16 22:22:09,176 - ERROR - Error en translator: Error code: 401 - {'error': {'message': 'No auth credentials found', 'code': 401}}
+2025-04-16 22:24:56,037 - ERROR - Error en translator: Error code: 401 - {'error': {'message': 'No auth credentials found', 'code': 401}}
