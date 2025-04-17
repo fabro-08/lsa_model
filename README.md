@@ -101,6 +101,20 @@ Esta clave se usa para autenticar llamadas a la API del modelo de lenguaje.
 - **Frontend:** desarrollado con **Streamlit**, para interfaz rápida de carga de textos y visualización de resultados.
 - **Backend:** construido con **FastAPI** para exponer servicios HTTP, integrando flujos de procesamiento de prompts mediante **LangChain** y **LangGraph**.
 
+
+## Uso de la interfaz (UI)
+
+En la interfaz de Streamlit encontrarás dos formularios:
+
+1. **Oración:** campo donde debes ingresar el texto que deseas traducir.
+2. **Prompt para el modelo:** campo donde debes cargar las instrucciones o reglas para la traducción.
+3. **Modelo a utilizar:** campo donde debes especificar el nombre del modelo que deseas usar.
+
+> Puedes obtener el nombre de los modelos disponibles visitando [openrouter.ai/models](https://openrouter.ai/models) y utilizando el botón de copiado para copiar el identificador exacto del modelo (por ejemplo: `meta-llama/llama-3.1-8b-instruct`, `deepseek/deepseek-r1-distill-llama-70b` o `microsoft/phi-4`).
+
+Finalmente, debes presionar el botón correspondiente para enviar la solicitud y visualizar la traducción generada.
+
+
 ---
 
 ✨ Proyecto orientado a facilitar la traducción entre lenguaje de señas argentino (LSA) y español usando IA generativa.
