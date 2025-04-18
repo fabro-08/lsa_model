@@ -4,6 +4,29 @@ Este proyecto implementa un traductor automático entre Lengua de Señas Argenti
 
 ![Interfaz del Traductor LSA ⬌️ SPA](./img/UI.jpg)
 
+
+![Flujo de datos etre UI y los servicios](./img/flow-service.png)
+
+### Prompt System
+```
+You are a helpful assistant that translates text from Argentinian Sign Language to spanish and spanish to Argentinian Sign Language. 
+You will be given a text in one language and you need to translate it into another language.
+Please provide the translation without any additional comments or explanations.
+```
+
+### General Prompt
+
+```
+Follow the instructions below to translate the text from one language to another:
+Instrucctions: {instructions}
+Texto to translate: {text}
+Please provide the translation in the same format as the input text.
+```
+
+Donde la variable <b>instructions</b> será el prompt con las indicaciónes de la traduccion y <b><text</b> será la oración a traducir. Ambos se ingresarán mediante el formulario de traducción.
+
+
+### 
 ## Instalación de Docker
 
 ### Windows
