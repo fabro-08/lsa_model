@@ -23,7 +23,7 @@ Texto to translate: {text}
 Please provide the translation in the same format as the input text.
 ```
 
-Donde la variable <b>instructions</b> será el prompt con las indicaciónes de la traduccion y <b><text</b> será la oración a traducir. Ambos se ingresarán mediante el formulario de traducción.
+La variable <b>instructions</b> será el prompt con las indicaciónes de la traduccion y <b>text</b> será la oración a traducir. Ambos se ingresarán mediante el formulario de traducción.
 
 
 ### 
